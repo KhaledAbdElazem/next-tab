@@ -2,20 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: linear-gradient(
+      to bottom,
+      #1a1a2e, /* Dark blue */
+      #16213e, /* Slightly lighter blue */
+      #0f3460, /* Darker blue */
+      #0a2647 /* Deep blue */
+    );
+    background-attachment: fixed; /* Ensure the gradient covers the entire page */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Custom Cyberpunk Modal Animation */
+  @keyframes cyberpunk-modal {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+      filter: blur(10px);
+    }
+    50% {
+      opacity: 1;
+      filter: blur(5px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .animate-cyberpunk-modal {
+    animation: cyberpunk-modal 0.5s ease-out forwards;
+  }
+
+  /* Neon Colors */
+  .text-neon-blue {
+    color: #00e1ff;
+    text-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff;
+  }
+
+  .text-neon-pink {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  }
+
+  .border-neon-blue {
+    border-color: #00e1ff;
+  }
+
+  .border-neon-pink {
+    border-color: #ff00ff;
+  }
+
+  .bg-neon-blue {
+    background-color: #00e1ff;
+  }
+
+  .bg-neon-pink {
+    background-color: #ff00ff;
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 10px #00e1ff, 0 0 20px #00e1ff;
+  }
+
+  .shadow-neon-pink {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
 }
