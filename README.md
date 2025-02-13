@@ -2,8 +2,8 @@
 
 A futuristic, cyberpunk-themed dashboard built with **Next.js**, **Tailwind CSS**, **Framer Motion**, and **tsParticles**. This project features a dynamic particle background, smooth animations, and a sleek, neon-themed design.
 
-![Screenshot](https://via.placeholder.com/800x400.png?text=Cyberpunk+Dashboard+Screenshot)  
-*(Replace this with an actual screenshot of your project)*
+![Screenshot](/public/Screenshot.png)  
+
 
 ---
 
